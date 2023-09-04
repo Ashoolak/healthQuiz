@@ -2,26 +2,244 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.background-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* This confines the Particles to the parent container */
+  z-index: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
+.question {
+  z-index: 2; /* or any value higher than the z-index of the background */
+}
+
+.button-container {
+  padding: 2px;
+  text-align: center;
+}
+
+.button-container button {
+  background-color: rgba(255, 255, 255, 0.3); /* Transparent background */
+  color: white;
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button-container button:hover {
+  background-color: rgba(255, 255, 255, 0.6); /* Less transparent on hover */
+}
+
+.button-container button:active {
+  background-color: green; /* Change color when clicked */
+}
+
+.question-background-1 {
+  background: linear-gradient(135deg, #5d3e85, #3f2963);
+  transition: background 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.question-background-2 {
+  background: linear-gradient(135deg, #e1bee7, #ce93d8);
+  position: relative;
+  overflow: hidden;
+}
+
+.question-background-3 {
+  background: linear-gradient(135deg, #ce93d8, #ba68c8);
+  position: relative;
+  overflow: hidden;
+}
+
+.question-background-4 {
+  background: linear-gradient(135deg, #ba68c8, #ab47bc);
+  position: relative;
+  overflow: hidden;
+}
+
+.question-background-5 {
+  background: linear-gradient(135deg, #ab47bc, #9c27b0);
+  position: relative;
+  overflow: hidden;
+}
+
+.question-background-6 {
+  background: linear-gradient(135deg, #9c27b0, #8e24aa);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Common Pseudo-element Styles for Added Complexity */
+.question-background-1:before,
+.question-background-2:before,
+.question-background-3:before,
+.question-background-4:before,
+.question-background-5:before,
+.question-background-6:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0.2; /* Adjust opacity for desired effect */
+  z-index: -1;
+}
+
+/* You can also add individual pseudo-elements for each background to further differentiate them */
+.question-background-1:after {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  right: -50px;
+  top: -50px;
+  background: #f3e5f5;
+  border-radius: 50%;
+  transform: rotate(45deg);
+}
+/* Repeat similar :after pseudo-elements for other backgrounds */
+
+.question-background-2:after {
+  content: '';
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  left: -75px;
+  bottom: -75px;
+  background: #ce93d8;
+  border-radius: 50%;
+  transform: rotate(45deg);
+}
+
+.question-background-3:after {
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  right: -100px;
+  bottom: -100px;
+  background: #ba68c8;
+  border-radius: 50%;
+  transform: rotate(45deg);
+}
+
+.question-background-4:after {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: -50px;
+  top: -50px;
+  background: #ab47bc;
+  border-radius: 50%;
+  transform: rotate(45deg);
+}
+
+.question-background-5:after {
+  content: '';
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  right: -75px;
+  top: -75px;
+  background: #9c27b0;
+  border-radius: 50%;
+  transform: rotate(45deg);
+}
+
+.question-background-6:after {
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  left: -100px;
+  bottom: -100px;
+  background: #8e24aa;
+  border-radius: 50%;
+  transform: rotate(45deg);
+}
+
+.question-button {
+  font-weight: bold;
+  background-color: transparent;
+  color: white;
+  padding: 15px 20px; /* Adjusted padding */
+  border: none;
+  cursor: pointer;
+  margin: auto;
+  transition: background-color 0.3s;
+  width: 100%;
+  text-align: left; /* Aligned text to the left */
+  display: block; /* Added display block */
+}
+
+.question-button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.clicked-background {
   background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    135deg,
+    rgba(93, 62, 133, 0.9),
+    rgba(63, 41, 99, 0.9)
+  );
+}
+
+.clicked {
+  background-color: rgba(255, 255, 255, 0.3); /* As per the hover effect */
+}
+
+.expanded-text {
+  transition: all 0.3s ease;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding-bottom: 20px;
+  opacity: 1;
+  padding: 0px 10px 20px 20px;
+  text-align: left;
+}
+
+.question-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.horizontal-line {
+  width: 100%;
+  border: none;
+  height: 1px;
+  background-color: white;
+  margin: 0;
+}
+
+.button {
+  background-color: transparent;
+  color: white;
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+  text-align: left;
 }

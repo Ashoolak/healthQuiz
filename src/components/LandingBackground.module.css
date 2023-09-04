@@ -1,0 +1,25 @@
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.7;
+  animation: rise 15s infinite linear, fade 5s infinite linear;
+}
+
+@keyframes rise {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes fade {
+  0%,
+  100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
