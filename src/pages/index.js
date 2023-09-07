@@ -1,11 +1,11 @@
 import React from 'react';
 import LandingPage from './LandingPage/landingPage';
-import Question1 from './questions/question1';
-import Question2 from './questions/question2';
-import Question3 from './questions/question3';
-import Question4 from './questions/question4';
-import Question5 from './questions/question5';
-import Question6 from './questions/question6';
+import Question1 from './Questions/question1';
+import Question2 from './Questions/question2';
+import Question3 from './Questions/question3';
+import Question4 from './Questions/question4';
+import Question5 from './Questions/question5';
+import Question6 from './Questions/question6';
 import CompletionPage from './CompletionPage/completionPage';
 
 export default function Home() {
