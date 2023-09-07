@@ -1,21 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import Particles from 'react-particles-js';
-import './landingPage.module.css';
 
 export default function MergedLandingPage(props) {
-  // Moved state and effect from LandingBackground to here
   const [particleNumber, setParticleNumber] = useState(30);
 
   useEffect(() => {
     setParticleNumber(window.innerWidth < 768 ? 20 : 50);
   }, []);
 
-  const PrepareImage = '/images/prepare.png';
-
   return (
     <div className="container mx-auto h-screen flex flex-col justify-center items-center z-10 relative">
       <div className="background-container h-screen w-screen relative">
-        {/* Moved Particles JSX here */}
         <Particles
           className="particles"
           params={{
@@ -33,7 +28,7 @@ export default function MergedLandingPage(props) {
       </div>
       <div className="image-container relative z-20 text-center">
         <img
-          src={PrepareImage}
+          src="/images/prepare.png"
           alt="Prepare"
           className="max-w-sm sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-4xl mx-auto"
         />
