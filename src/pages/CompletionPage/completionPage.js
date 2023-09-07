@@ -1,5 +1,4 @@
 import React from 'react';
-import './completionPage.module.css';
 import Confetti from 'react-confetti';
 
 export default function CompletionPage() {
