@@ -1,5 +1,6 @@
 import React from 'react';
 import './completionPage.module.css';
+import Confetti from 'react-confetti';
 
 export default function CompletionPage() {
   return (
@@ -7,6 +8,7 @@ export default function CompletionPage() {
       id="completionPage"
       className="completion-background h-screen flex justify-center items-center"
     >
+      <Confetti />
       <div className="completion-star">
         <h2 className="text-black text-center font-bold">CONGRATULATION!</h2>
         <br />
