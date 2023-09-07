@@ -1,5 +1,5 @@
 import React from 'react';
-import LandingBackground from '../components/LandingBackground';
+import LandingBackground from './LandingBackground';
 
 const PrepareImage = '/images/prepare.png';
 

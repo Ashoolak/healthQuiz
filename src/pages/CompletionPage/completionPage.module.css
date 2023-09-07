@@ -1,0 +1,17 @@
+.completion-background {
+  background-color: #f4d44d;
+  position: relative;
+}
+
+.completion-star {
+  background-color: #f9ebae;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  width: 300px;
+  z-index: 2;
+}
+
+.confetti {
+  /* We'll add animation CSS here */
+}

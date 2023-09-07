@@ -1,11 +1,12 @@
 import React from 'react';
-import LandingPage from './landingPage';
+import LandingPage from './LandingPage/landingPage';
 import Question1 from './questions/question1';
 import Question2 from './questions/question2';
 import Question3 from './questions/question3';
 import Question4 from './questions/question4';
 import Question5 from './questions/question5';
 import Question6 from './questions/question6';
+import CompletionPage from './CompletionPage/completionPage';
 
 export default function Home() {
   const scrollToComponent = (componentId) => {
@@ -42,6 +43,8 @@ export default function Home() {
         onClick={() => scrollToComponent('completionPage')}
         id="question6"
       />
+
+      <CompletionPage id="completionPage" />
     </>
   );
 }
