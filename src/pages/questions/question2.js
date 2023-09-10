@@ -13,8 +13,8 @@ export default function Question2(props) {
       id="question2"
       className={`question-background-2 flex text-white text-2xl h-screen justify-center items-center`}
     >
-      <div className="content-container">
-        <div className="w-full md:w-1/2 align-centre m-auto font-sans">
+      <div className="w-full md:w-1/2 align-centre m-auto font-sans">
+        <div className="content-container">
           <span className="font-bold block text-center">
             Answer <i>yes</i>, <i>no</i>, or <i>I don't know</i> to the
             following question.
