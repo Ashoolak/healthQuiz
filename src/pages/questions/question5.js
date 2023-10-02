@@ -50,7 +50,7 @@ export default function Question5(props) {
                 medication to prevent or treat HIV infection.
               </p>
               <div className="flex justify-center">
-                <button onClick={props.onClick} className="next-button">
+                <button onClick={props.onClick} className="primary-button">
                   Continue to Question 6 of 6 &gt;
                 </button>
               </div>
@@ -86,7 +86,7 @@ export default function Question5(props) {
                 medication to prevent or treat HIV infection.
               </p>
               <div className="flex justify-center">
-                <button onClick={props.onClick} className="next-button">
+                <button onClick={props.onClick} className="primary-button">
                   Continue to Question 6 of 6 &gt;
                 </button>
               </div>

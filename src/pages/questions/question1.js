@@ -54,7 +54,7 @@ export default function Question1(props) {
               </p>
               <br className="smaller-break" />
               <div className="flex justify-center">
-                <button onClick={props.onClick} className="next-button">
+                <button onClick={props.onClick} className="primary-button">
                   Continue to Question 2 of 6 &gt;
                 </button>
               </div>
@@ -94,7 +94,7 @@ export default function Question1(props) {
               </p>
               <br className="smaller-break" />
               <div className="flex justify-center">
-                <button onClick={props.onClick} className="next-button">
+                <button onClick={props.onClick} className="primary-button">
                   Continue to Question 2 of 6 &gt;
                 </button>
               </div>

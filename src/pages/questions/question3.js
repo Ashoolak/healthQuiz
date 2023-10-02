@@ -53,7 +53,7 @@ export default function Question3(props) {
                 continue sharing STI test results with your partner!
               </p>
               <div className="flex justify-center">
-                <button onClick={props.onClick} className="next-button">
+                <button onClick={props.onClick} className="primary-button">
                   Continue to Question 4 of 6 &gt;
                 </button>
               </div>
@@ -90,7 +90,7 @@ export default function Question3(props) {
               include offering you STI testing and treatment, including
               medication to prevent or treat HIV infection, if you need it!
               <div className="flex justify-center">
-                <button onClick={props.onClick} className="next-button">
+                <button onClick={props.onClick} className="primary-button">
                   Continue to Question 4 of 6 &gt;
                 </button>
               </div>
@@ -130,7 +130,7 @@ export default function Question3(props) {
               include offering you STI testing and treatment, including
               medication to prevent or treat HIV infection, if you need it.
               <div className="flex justify-center">
-                <button onClick={props.onClick} className="next-button">
+                <button onClick={props.onClick} className="primary-button">
                   Continue to Question 4 of 6 &gt;
                 </button>
               </div>

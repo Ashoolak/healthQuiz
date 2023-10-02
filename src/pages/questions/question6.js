@@ -65,7 +65,7 @@ export default function Question6(props) {
                 HIV infection.
               </p>
               <div className="flex justify-center">
-                <button onClick={props.onClick} className="next-button">
+                <button onClick={props.onClick} className="primary-button">
                   Complete Quiz
                 </button>
               </div>
@@ -101,7 +101,7 @@ export default function Question6(props) {
                 that might work for you!
               </p>
               <div className="flex justify-center">
-                <button onClick={props.onClick} className="next-button">
+                <button onClick={props.onClick} className="primary-button">
                   Complete Quiz
                 </button>
               </div>
@@ -145,7 +145,7 @@ export default function Question6(props) {
                 STI prevention methods that might work for you!
               </p>
               <div className="flex justify-center">
-                <button onClick={props.onClick} className="next-button">
+                <button onClick={props.onClick} className="primary-button">
                   Complete Quiz
                 </button>
               </div>

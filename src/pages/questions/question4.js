@@ -63,7 +63,7 @@ export default function Question4(props) {
                 drug use, including taking medication to prevent infection.
               </p>
               <div className="flex justify-center">
-                <button onClick={props.onClick} className="next-button">
+                <button onClick={props.onClick} className="primary-button">
                   Continue to Question 5 of 6 &gt;
                 </button>
               </div>
@@ -111,7 +111,7 @@ export default function Question4(props) {
                 drug use, including taking medication to prevent infection.
               </p>
               <div className="flex justify-center">
-                <button onClick={props.onClick} className="next-button">
+                <button onClick={props.onClick} className="primary-button">
                   Continue to Question 5 of 6 &gt;
                 </button>
               </div>
@@ -160,7 +160,7 @@ export default function Question4(props) {
                 drug use, including taking medication to prevent infection.
               </p>
               <div className="flex justify-center">
-                <button onClick={props.onClick} className="next-button">
+                <button onClick={props.onClick} className="primary-button">
                   Continue to Question 5 of 6 &gt;
                 </button>
               </div>

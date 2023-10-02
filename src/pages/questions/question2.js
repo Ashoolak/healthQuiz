@@ -57,7 +57,7 @@ export default function Question2(props) {
                 medication to prevent or treat HIV infection, if you need it.
               </p>
               <div className="flex justify-center">
-                <button onClick={props.onClick} className="next-button">
+                <button onClick={props.onClick} className="primary-button">
                   Continue to Question 3 of 6 &gt;
                 </button>
               </div>
@@ -90,7 +90,7 @@ export default function Question2(props) {
               transmitting HIV. Continue choosing the prevention methods that
               work for you!
               <div className="flex justify-center">
-                <button onClick={props.onClick} className="next-button">
+                <button onClick={props.onClick} className="primary-button">
                   Continue to Question 3 of 6 &gt;
                 </button>
               </div>
@@ -125,7 +125,7 @@ export default function Question2(props) {
               entirely. Or maybe you’ve never had one. Either way, continue
               choosing the prevention methods that work for you!
               <div className="flex justify-center">
-                <button onClick={props.onClick} className="next-button">
+                <button onClick={props.onClick} className="primary-button">
                   Continue to Question 3 of 6 &gt;
                 </button>
               </div>
