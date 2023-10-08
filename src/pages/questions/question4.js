@@ -39,7 +39,7 @@ export default function Question4(props) {
           </button>
 
           {showExtraYes && (
-            <div className="expanded-text text-lg">
+            <div className="expanded-text show-content text-lg">
               <p>
                 Having sex while using drugs can make you more likely to engage
                 in risky sexual behavior. Risky behavior can place you at risk
@@ -87,7 +87,7 @@ export default function Question4(props) {
           </button>
 
           {showExtraNo && (
-            <div className="expanded-text text-lg">
+            <div className="expanded-text show-content text-lg">
               <p>
                 Having sex while using drugs can make you more likely to engage
                 in risky sexual behavior. Risky behavior can place you at risk
@@ -136,7 +136,7 @@ export default function Question4(props) {
           </button>
 
           {showExtraIDK && (
-            <div className="expanded-text text-lg">
+            <div className="expanded-text show-content text-lg">
               <p>
                 Having sex while using drugs can make you more likely to engage
                 in risky sexual behavior. Risky behavior can place you at risk

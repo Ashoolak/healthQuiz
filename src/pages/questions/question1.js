@@ -36,7 +36,7 @@ export default function Question1(props) {
           </button>
 
           {showExtraYes && (
-            <div className="expanded-text text-lg">
+            <div className="expanded-text show-content text-lg">
               <p>
                 Correctly using condoms and other barriers every time you have
                 sex can reduce the risk of STIs, including HIV.
@@ -76,7 +76,7 @@ export default function Question1(props) {
           </button>
 
           {showExtraNo && (
-            <div className="expanded-text text-lg">
+            <div className="expanded-text show-content text-lg">
               <p>
                 Correctly using condoms and other barriers every time you have
                 sex can reduce the risk of STIs, including HIV.

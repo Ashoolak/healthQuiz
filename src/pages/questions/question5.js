@@ -35,7 +35,7 @@ export default function Question5(props) {
           </button>
 
           {showExtraYes && (
-            <div className="expanded-text text-lg">
+            <div className="expanded-text show-content text-lg">
               <p>
                 People who exchange sex are at increased risk of getting or
                 transmitting HIV and other STIs because they are more likely to
@@ -72,7 +72,7 @@ export default function Question5(props) {
           </button>
 
           {showExtraNo && (
-            <div className="expanded-text text-lg">
+            <div className="expanded-text show-content text-lg">
               <p>
                 Exchanging sex can increase the risk of getting or transmitting
                 HIV and other STIs because it can involve behaviors such as sex

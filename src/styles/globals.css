@@ -21,46 +21,38 @@ html {
 
 /* Original first background */
 .question-background-1 {
-  background: linear-gradient(135deg, #5d3e85, #3f2963);
+  background: linear-gradient(180deg, #5d3e85, #3f2963);
   position: relative;
   overflow: hidden;
 }
 
 /* Less contrast but still colorful backgrounds */
 .question-background-2 {
-  background: linear-gradient(135deg, #3498db, #2980b9);
+  background: linear-gradient(180deg, #3f2963, #286387);
   position: relative;
   overflow: hidden;
 }
 
 .question-background-3 {
-  background: linear-gradient(135deg, #1abc9c, #16a085);
+  background: linear-gradient(180deg, #286387, #5b823f);
   position: relative;
   overflow: hidden;
 }
 
 .question-background-4 {
-  background: linear-gradient(135deg, #27ae60, #2ecc71);
+  background: linear-gradient(180deg, #5b823f, #874563);
   position: relative;
   overflow: hidden;
 }
 
 .question-background-5 {
-  background: linear-gradient(
-    135deg,
-    #3498db,
-    #9b59b6
-  ); /* From blue to purple */
+  background: linear-gradient(180deg, #874563, #8a6f2c);
   position: relative;
   overflow: hidden;
 }
 
 .question-background-6 {
-  background: linear-gradient(
-    135deg,
-    #8e44ad,
-    #1e215d
-  ); /* From purple to dark blue */
+  background: linear-gradient(180deg, #8a6f2c, #1e215d);
   position: relative;
   overflow: hidden;
 }
@@ -135,13 +127,25 @@ html {
   background-color: rgba(255, 255, 255, 0.3); /* As per the hover effect */
 }
 
+@keyframes expandBox {
+  from {
+    max-height: 0;
+  }
+  to {
+    max-height: 800px; /* Adjust this if the content might be taller */
+  }
+}
+
 .expanded-text {
-  transition: all 0.3s ease;
-  overflow-y: auto; /* Allows scrolling only when content height exceeds max-height */
-  max-height: 80vh; /* Adjust the maximum height based on the viewport. */
+  overflow-y: hidden;
+  max-height: 0;
   background-color: rgba(255, 255, 255, 0.3);
   padding: 0px 10px 20px 20px;
   text-align: left;
+}
+
+.show-content {
+  animation: expandBox 0.6s forwards; /* Use the animation */
 }
 
 .question-container {

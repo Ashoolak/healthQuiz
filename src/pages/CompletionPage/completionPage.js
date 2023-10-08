@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from './completionPage.module.css';
+import Link from 'next/link';
 
 export default function CompletionPage() {
   const [width, setWidth] = useState(0);
@@ -28,28 +29,46 @@ export default function CompletionPage() {
       </div>
       <div className="flex flex-col justify-center items-center flex-grow mb-20">
         <div className="flex flex-row justify-between w-11/12 gap-4 mb-4">
-          <button className="primary-button w-[200px]">
+          <Link
+            href="/AdditionalLinks/maleCondomsDD"
+            className="primary-button w-[200px]"
+          >
             Male (External) Condom: Dos and Don’ts
-          </button>
-          <button className="primary-button w-[200px]">
-            How to put a Male (External) Condom
-          </button>
+          </Link>
+          <Link
+            href="/AdditionalLinks/maleCondomsDD"
+            className="primary-button w-[200px]"
+          >
+            How to put a Male (External) Condom On
+          </Link>
         </div>
         <div className="flex flex-row justify-between w-11/12 gap-4 mb-4">
-          <button className="primary-button w-[200px]">
+          <Link
+            href="/AdditionalLinks/femaleCondomsDD"
+            className="primary-button w-[200px]"
+          >
             Female (Internal) Condom: Dos and Don’ts
-          </button>
-          <button className="primary-button w-[200px]">
+          </Link>
+          <Link
+            href="/AdditionalLinks/maleCondomsDD"
+            className="primary-button w-[200px]"
+          >
             How To Insert and Remove a Female (Internal) Condom
-          </button>
+          </Link>
         </div>
         <div className="flex flex-row justify-between w-11/12 gap-4 mb-4">
-          <button className="primary-button w-[200px]">
+          <Link
+            href="/AdditionalLinks/maleCondomsDD"
+            className="primary-button w-[200px]"
+          >
             Screening Recommendations for Sexually Transmitted Infections
-          </button>
-          <button className="primary-button w-[200px]">
+          </Link>
+          <Link
+            href="/AdditionalLinks/maleCondomsDD"
+            className="primary-button w-[200px]"
+          >
             Find Free, Fast, and Confidential Testing Near You
-          </button>
+          </Link>
         </div>
       </div>
 

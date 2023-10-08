@@ -39,7 +39,7 @@ export default function Question2(props) {
           </button>
 
           {showExtraYes && (
-            <div className="expanded-text text-lg">
+            <div className="expanded-text show-content text-lg">
               <p>
                 Having had an STI before could place you at greater risk of
                 having or getting one now. That’s because engaging in the same
@@ -81,7 +81,7 @@ export default function Question2(props) {
           </button>
 
           {showExtraNo && (
-            <div className="expanded-text text-lg">
+            <div className="expanded-text show-content text-lg">
               Did you know that having had an STI before could place you at
               greater risk of having or getting one now? That’s because engaging
               in the same or similar sexual behaviors could place you at risk
@@ -115,7 +115,7 @@ export default function Question2(props) {
           </button>
 
           {showExtraIDK && (
-            <div className="expanded-text text-lg">
+            <div className="expanded-text show-content text-lg">
               If you don’t know, that’s okay! These infections don’t always
               cause symptoms or may only cause mild symptoms. So, it is possible
               to have had an infection and not known it. That is why getting a

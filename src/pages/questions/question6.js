@@ -41,7 +41,7 @@ export default function Question6(props) {
           </button>
 
           {showExtraYes && (
-            <div className="expanded-text text-lg">
+            <div className="expanded-text show-content text-lg">
               <p>
                 Being in a long-term mutually monogamous relationship with a
                 partner who does not have an STI is one of the most reliable
@@ -89,7 +89,7 @@ export default function Question6(props) {
           </button>
 
           {showExtraNo && (
-            <div className="expanded-text text-lg">
+            <div className="expanded-text show-content text-lg">
               <p>
                 Agreeing to be in a long-term mutually monogamous relationship
                 with a partner who does not have an STI is a great way to avoid
@@ -126,7 +126,7 @@ export default function Question6(props) {
           </button>
 
           {showExtraIDK && (
-            <div className="expanded-text text-lg">
+            <div className="expanded-text show-content text-lg">
               <p>
                 If you’re not sure if your partner has had sex with others while
                 also having sex with you, this could be a good time to have that
