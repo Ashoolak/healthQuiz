@@ -32,7 +32,7 @@ export default function MergedLandingPage(props) {
           },
         }}
       />
-      <div className="relative z-10 text-center">
+      <div className="relative z-3 text-center">
         <img
           src="/images/prepare.png"
           alt="Prepare"
