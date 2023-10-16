@@ -20,6 +20,23 @@ const CookieConsentBanner = ({ type }) => {
     transition: 'background-color 0.3s ease',
   };
 
+  const settingsTextButtonStyles = {
+    background: 'none', // No background
+    color: 'white', // Color to match the text
+    fontSize: '1rem', // Same font size as the text
+    textDecoration: 'underline', // Underlined
+    border: 'none', // No border
+    cursor: 'pointer', // Cursor change on hover
+  };
+
+  const invisibleButtonStyles = {
+    ...buttonStyles,
+    backgroundColor: '#2B373B',
+    color: '#2B373B',
+    border: 'none',
+    cursor: 'default',
+  };
+
   const declineButtonStyles = {
     ...buttonStyles,
     backgroundColor: '#7f8c8d', // Decline button color
@@ -55,11 +72,12 @@ const CookieConsentBanner = ({ type }) => {
         >
           This website uses cookies to enhance the user experience.{' '}
           <button
-            style={buttonStyles}
+            style={settingsTextButtonStyles}
             onClick={() => window.open('/cookie-settings', '_blank')}
           >
             Settings
           </button>
+          .
         </CookieConsent>
       );
 
@@ -70,7 +88,7 @@ const CookieConsentBanner = ({ type }) => {
           overlay={true}
           style={blockingStyles}
           buttonStyle={buttonStyles}
-          declineButtonStyle={rejectButtonStyles}
+          declineButtonStyle={declineButtonStyles}
           buttonText="Accept"
           enableDeclineButton
           declineButtonText="Reject"
@@ -80,11 +98,12 @@ const CookieConsentBanner = ({ type }) => {
         >
           This website uses cookies to enhance the user experience.{' '}
           <button
-            style={buttonStyles}
+            style={settingsTextButtonStyles}
             onClick={() => window.open('/cookie-settings', '_blank')}
           >
             Settings
           </button>
+          .
         </CookieConsent>
       );
 
@@ -104,11 +123,12 @@ const CookieConsentBanner = ({ type }) => {
         >
           This website uses cookies to enhance the user experience.{' '}
           <button
-            style={buttonStyles}
+            style={settingsTextButtonStyles}
             onClick={() => window.open('/cookie-settings', '_blank')}
           >
             Settings
           </button>
+          .
         </CookieConsent>
       );
 
@@ -131,20 +151,33 @@ const CookieConsentBanner = ({ type }) => {
           }}
         >
           This website uses cookies to enhance the user experience.{' '}
-          <a href="/cookie-settings" target="_blank" style={buttonStyles}>
+          <button
+            style={settingsTextButtonStyles}
+            onClick={() => window.open('/cookie-settings', '_blank')}
+          >
             Settings
-          </a>
+          </button>
+          .
         </CookieConsent>
       );
 
     case 5:
       return (
-        <CookieConsent location="bottom" overlay={false} style={commonStyles}>
+        <CookieConsent
+          location="bottom"
+          overlay={false}
+          style={commonStyles}
+          buttonStyle={invisibleButtonStyles} // Apply the invisible button styles
+          buttonText="I understand"
+        >
           This website uses cookies to enhance the user experience. For
           settings, see our{' '}
-          <a href="/cookie-settings" target="_blank" style={buttonStyles}>
-            Cookie Policy
-          </a>
+          <button
+            style={settingsTextButtonStyles}
+            onClick={() => window.open('/cookie-settings', '_blank')}
+          >
+            Settings
+          </button>
           .
         </CookieConsent>
       );
