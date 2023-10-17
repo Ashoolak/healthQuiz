@@ -6,6 +6,7 @@ class CookieConsentBanner extends React.Component {
     super(props);
     this.state = {
       showBanner: true,
+      showModal: false,
     };
     this.cookieRef = React.createRef();
   }
@@ -17,7 +18,51 @@ class CookieConsentBanner extends React.Component {
     this.setState({ showBanner: false });
   };
 
+  handleOpenModal = () => {
+    this.setState({ showModal: true });
+  };
+
+  handleCloseModal = () => {
+    this.setState({ showModal: false });
+  };
+
+  renderModal() {
+    if (!this.state.showModal) return null;
+
+    return (
+      <div
+        style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          width: '100vw',
+          height: '100vh',
+          backgroundColor: 'rgba(0, 0, 0, 0.7)',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
+        <div
+          style={{
+            backgroundColor: '#fff',
+            padding: '20px',
+            borderRadius: '10px',
+            width: '50%',
+            height: '50%',
+          }}
+        >
+          <h2>Cookie Settings</h2>
+          {/* Your toggle switch components go here */}
+          <button onClick={this.handleCloseModal}>Close</button>
+        </div>
+      </div>
+    );
+  }
+
   render() {
+    const modal = this.renderModal();
+
     if (!this.state.showBanner) {
       return null;
     }
@@ -34,26 +79,29 @@ class CookieConsentBanner extends React.Component {
     switch (this.props.type) {
       case 1:
         return (
-          <CookieConsent
-            location="center"
-            overlay={true}
-            style={blockingStyles}
-            buttonStyle={buttonStyles}
-            buttonText="Accept"
-          >
-            This website uses cookies to make the website work properly, enhance
-            performance, create personalized functionality, provide us with
-            website use information, and deliver targeted ads. You can accept
-            cookies using the button below, or you can customize your
-            preferences using the « Cookie Settings » button.{' '}
-            <button
-              style={settingsTextButtonStyles}
-              onClick={() => window.open('/cookie-settings', '_blank')}
+          <>
+            {modal}
+            <CookieConsent
+              location="center"
+              overlay={true}
+              style={blockingStyles}
+              buttonStyle={buttonStyles}
+              buttonText="Accept"
             >
-              Cookie Settings
-            </button>
-            .
-          </CookieConsent>
+              This website uses cookies to make the website work properly,
+              enhance performance, create personalized functionality, provide us
+              with website use information, and deliver targeted ads. You can
+              accept cookies using the button below, or you can customize your
+              preferences using the « Cookie Settings » button.{' '}
+              <button
+                style={settingsTextButtonStyles}
+                onClick={this.handleOpenModal}
+              >
+                Cookie Settings
+              </button>
+              .
+            </CookieConsent>
+          </>
         );
 
       case 2:
@@ -77,7 +125,7 @@ class CookieConsentBanner extends React.Component {
             required to maintain minimal necessary website functionality.{' '}
             <button
               style={settingsTextButtonStyles}
-              onClick={() => window.open('/cookie-settings', '_blank')}
+              oonClick={this.handleOpenModal}
             >
               Cookie Settings
             </button>
@@ -102,7 +150,7 @@ class CookieConsentBanner extends React.Component {
             Settings » button.{' '}
             <button
               style={settingsTextButtonStyles}
-              onClick={() => window.open('/cookie-settings', '_blank')}
+              onClick={this.handleOpenModal}
             >
               Cookie Settings
             </button>
@@ -136,7 +184,7 @@ class CookieConsentBanner extends React.Component {
             functionality.{' '}
             <button
               style={settingsTextButtonStyles}
-              onClick={() => window.open('/cookie-settings', '_blank')}
+              onClick={this.handleOpenModal}
             >
               Cookie Settings
             </button>
@@ -164,7 +212,7 @@ class CookieConsentBanner extends React.Component {
             of cookies. You can customize your preferences by modifying the{' '}
             <button
               style={settingsTextButtonStyles}
-              onClick={() => window.open('/cookie-settings', '_blank')}
+              onClick={this.handleOpenModal}
             >
               Cookie Settings
             </button>
