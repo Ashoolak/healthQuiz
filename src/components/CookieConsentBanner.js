@@ -32,7 +32,11 @@ class CookieConsentBanner extends React.Component {
             buttonStyle={buttonStyles}
             buttonText="Accept"
           >
-            This website uses cookies to enhance the user experience.{' '}
+            This website uses cookies to make the website work properly, enhance
+            performance, create personalized functionality, provide us with
+            website use information, and deliver targeted ads. You can accept
+            cookies using the button below, or you can customize your
+            preferences using the « Cookie Settings » button.{' '}
             <button
               style={settingsTextButtonStyles}
               onClick={() => window.open('/cookie-settings', '_blank')}
@@ -55,7 +59,13 @@ class CookieConsentBanner extends React.Component {
             enableDeclineButton
             declineButtonText="Reject"
           >
-            This website uses cookies to enhance the user experience.{' '}
+            This website uses cookies to make the website work properly, enhance
+            performance, create personalized functionality, provide us with
+            website use information, and deliver targeted ads. You can accept or
+            reject cookies using the buttons below, or you can customize your
+            preferences using the « Cookie Settings » button. Choosing to «
+            Reject » cookies will reject all cookies except those that are
+            required to maintain minimal necessary website functionality.{' '}
             <button
               style={settingsTextButtonStyles}
               onClick={() => window.open('/cookie-settings', '_blank')}
@@ -75,7 +85,12 @@ class CookieConsentBanner extends React.Component {
             buttonStyle={buttonStyles}
             buttonText="Accept"
           >
-            This website uses cookies to enhance the user experience.{' '}
+            Cookies on this website. This website uses cookies to make the
+            website work properly, enhance performance, create personalized
+            functionality, provide us with website use information, and deliver
+            targeted ads. By continuing to use this website, you accept our use
+            of cookies. You can customize your preferences using the « Cookie
+            Settings » button.{' '}
             <button
               style={settingsTextButtonStyles}
               onClick={() => window.open('/cookie-settings', '_blank')}
@@ -101,7 +116,15 @@ class CookieConsentBanner extends React.Component {
             enableDeclineButton
             declineButtonText="Reject"
           >
-            This website uses cookies to enhance the user experience.{' '}
+            Cookies on this website. This website uses cookies to make the
+            website work properly, enhance performance, create personalized
+            functionality, provide us with website use information, and deliver
+            targeted ads. By continuing to use this website, you accept our use
+            of cookies. You can reject cookies using the button below, or you
+            can customize your preferences using the « Cookie Settings » button.
+            Choosing to « Reject » cookies will reject all cookies except those
+            that are required to maintain minimal necessary website
+            functionality.{' '}
             <button
               style={settingsTextButtonStyles}
               onClick={() => window.open('/cookie-settings', '_blank')}
@@ -125,7 +148,11 @@ class CookieConsentBanner extends React.Component {
             buttonStyle={hiddenButtonStyle}
             buttonText=" "
           >
-            This website uses cookies to enhance the user experience.{' '}
+            Cookies on this website. This website uses cookies to make the
+            website work properly, enhance performance, create personalized
+            functionality, provide us with website use information, and deliver
+            targeted ads. By continuing to use this website, you accept our use
+            of cookies. You can customize your preferences by modifying the{' '}
             <button
               style={settingsTextButtonStyles}
               onClick={() => window.open('/cookie-settings', '_blank')}

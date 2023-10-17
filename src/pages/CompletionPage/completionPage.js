@@ -9,7 +9,7 @@ export default function CompletionPage() {
       id="completionPage"
       className={`${styles['completion-background']} h-screen flex flex-col justify-start items-center`}
     >
-      <CookieConsentBanner type={5} />
+      <CookieConsentBanner type={1} />
       <div className={`${styles['completion-text']}`}>
         <h2 className="text-center text-2xl font-bold">CONGRATULATION!</h2>
         <br />
