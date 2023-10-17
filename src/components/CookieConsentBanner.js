@@ -4,14 +4,23 @@ import CookieConsent from 'react-cookie-consent';
 class CookieConsentBanner extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      showBanner: true,
+    };
     this.cookieRef = React.createRef();
   }
 
   handleDeclineAndClose = () => {
-    this.cookieRef.current.decline();
+    if (this.cookieRef.current && this.cookieRef.current.decline) {
+      this.cookieRef.current.decline();
+    }
+    this.setState({ showBanner: false });
   };
 
   render() {
+    if (!this.state.showBanner) {
+      return null;
+    }
     const {
       commonStyles,
       buttonStyles,
