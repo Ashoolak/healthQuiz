@@ -1,12 +1,12 @@
 import React from 'react';
 import CookieConsent from 'react-cookie-consent';
+import ToggleSwitch from './ToggleSwitch';
 
 class CookieConsentBanner extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      showBanner: true,
-      showModal: false,
+      showSettingPref: false,
     };
     this.cookieRef = React.createRef();
   }
@@ -15,57 +15,46 @@ class CookieConsentBanner extends React.Component {
     if (this.cookieRef.current && this.cookieRef.current.decline) {
       this.cookieRef.current.decline();
     }
-    this.setState({ showBanner: false });
   };
 
-  handleOpenModal = () => {
-    this.setState({ showModal: true });
+  handleOpenSettingPref = () => {
+    this.handleDeclineAndClose();
+    console.log('hello mr ashkan yazdi zadeh');
+    this.setState({ showSettingPref: true });
   };
 
-  handleCloseModal = () => {
-    this.setState({ showModal: false });
+  handleCloseSettingPref = () => {
+    this.setState({ showSettingPref: false });
   };
 
-  renderModal() {
-    if (!this.state.showModal) return null;
+  renderSettingPref() {
+    if (!this.state.showSettingPref) return null;
 
     return (
-      <div
-        style={{
-          position: 'fixed',
-          top: 0,
-          left: 0,
-          width: '100vw',
-          height: '100vh',
-          backgroundColor: 'rgba(0, 0, 0, 0.7)',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}
-      >
-        <div
-          style={{
-            backgroundColor: '#fff',
-            padding: '20px',
-            borderRadius: '10px',
-            width: '50%',
-            height: '50%',
-          }}
-        >
+      <div className="fixed items-center w-1/2 h-1/2 bg-black bg-opacity-70 flex items-center justify-center z-1000">
+        <div className="bg-white p-5 rounded-lg w-1/2 h-1/2">
           <h2>Cookie Settings</h2>
-          {/* Your toggle switch components go here */}
-          <button onClick={this.handleCloseModal}>Close</button>
+          <ToggleSwitch
+            label="Strictly Necessary Cookies"
+            defaultChecked={true}
+          />
+          <ToggleSwitch label="Performance Cookies" defaultChecked={true} />
+          <ToggleSwitch label="Targeting Cookies" defaultChecked={true} />
+
+          <button onClick={this.handleCloseSettingPref}>Apply</button>
         </div>
       </div>
     );
   }
 
   render() {
-    const modal = this.renderModal();
+    const modal = this.renderSettingPref();
 
-    if (!this.state.showBanner) {
-      return null;
+    if (this.state.showSettingPref) {
+      console.log('how are you');
+      return modal;
     }
+
     const {
       commonStyles,
       buttonStyles,
@@ -95,7 +84,7 @@ class CookieConsentBanner extends React.Component {
               preferences using the « Cookie Settings » button.{' '}
               <button
                 style={settingsTextButtonStyles}
-                onClick={this.handleOpenModal}
+                onClick={this.handleOpenSettingPref}
               >
                 Cookie Settings
               </button>
@@ -125,7 +114,7 @@ class CookieConsentBanner extends React.Component {
             required to maintain minimal necessary website functionality.{' '}
             <button
               style={settingsTextButtonStyles}
-              oonClick={this.handleOpenModal}
+              onClick={this.handleOpenSettingPref}
             >
               Cookie Settings
             </button>
@@ -150,7 +139,7 @@ class CookieConsentBanner extends React.Component {
             Settings » button.{' '}
             <button
               style={settingsTextButtonStyles}
-              onClick={this.handleOpenModal}
+              onClick={this.handleOpenSettingPref}
             >
               Cookie Settings
             </button>
@@ -184,7 +173,7 @@ class CookieConsentBanner extends React.Component {
             functionality.{' '}
             <button
               style={settingsTextButtonStyles}
-              onClick={this.handleOpenModal}
+              onClick={this.handleOpenSettingPref}
             >
               Cookie Settings
             </button>
@@ -212,7 +201,7 @@ class CookieConsentBanner extends React.Component {
             of cookies. You can customize your preferences by modifying the{' '}
             <button
               style={settingsTextButtonStyles}
-              onClick={this.handleOpenModal}
+              onClick={this.handleOpenSettingPref}
             >
               Cookie Settings
             </button>
