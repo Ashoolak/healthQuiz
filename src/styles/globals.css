@@ -19,7 +19,32 @@ html {
   z-index: 2;
 }
 
-/* Original first background */
+.landing-background-1 {
+  background: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #5d3e85;
+  opacity: 0.6;
+  animation: float 5s infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .question-background-1 {
   background: linear-gradient(180deg, #5d3e85, #3f2963);
   position: relative;
@@ -102,25 +127,24 @@ html {
 
 .primary-button {
   margin-top: 1rem;
-  background-color: #4a007d; /* Darker shade of purple */
-  color: white;
+  background-color: #4a007d;
   font-weight: bold;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  padding-left: 0.5rem; /* Padding on left */
-  padding-right: 0.5rem; /* Padding on right */
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   font-size: 1rem;
   border-radius: 9999px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 100%; /* 100% width */
-  text-align: center; /* Center the text */
+  width: 100%;
+  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
 .primary-button:hover {
-  background-color: #6807a5; /* Even darker on hover */
+  background-color: #6807a5;
 }
 
 .question-button:hover {
@@ -128,7 +152,7 @@ html {
 }
 
 .clicked {
-  background-color: rgba(255, 255, 255, 0.3); /* As per the hover effect */
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 @keyframes expandBox {
@@ -136,7 +160,7 @@ html {
     max-height: 0;
   }
   to {
-    max-height: 800px; /* Adjust this if the content might be taller */
+    max-height: 800px;
   }
 }
 
@@ -149,7 +173,7 @@ html {
 }
 
 .show-content {
-  animation: expandBox 0.6s forwards; /* Use the animation */
+  animation: expandBox 0.6s forwards;
 }
 
 .question-container {
@@ -272,7 +296,6 @@ html {
   margin-top: 8px; /* Adjust as needed for spacing at the top */
 }
 
-/* Ensure the background is at least the height of the screen but can grow */
 .bg-gray-900 {
   min-height: 100vh;
 }
