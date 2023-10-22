@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function MergedLandingPage(props) {
+export default function LandingPage(props) {
   return (
     <div className="container mx-auto h-screen flex flex-col justify-center items-center relative">
-      <div className="relative z-3 text-center">
+      <div className="relative text-center">
         <img
           src="/images/prepare.png"
           alt="Prepare"
