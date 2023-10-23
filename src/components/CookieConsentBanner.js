@@ -63,16 +63,18 @@ const CookieConsentBanner = ({ type }) => {
             <div
               className={`mx-auto ${
                 type === 1 || type === 2
-                  ? 'rounded-md shadow-lg bg-white p-8 border-blue-500 border'
-                  : 'p-4'
-              } ${isBottomBanner ? 'w-3/4' : 'bg-white w-1/3 h-1/4'}`}
+                  ? 'rounded-md shadow-lg bg-white p-8 border-blue-500 border sm:w-1/2 w-3/4 overflow-y-auto'
+                  : ''
+              } ${isBottomBanner ? 'w-4/5' : 'bg-white w-1/3 h-1/4'}`}
               style={{
                 opacity: type === 1 || type === 2 ? '1' : '',
+                maxHeight: isBottomBanner ? '30vh' : '490px',
+                overflowY: 'auto',
               }}
             >
               {isBottomBanner && (
                 <button
-                  className="absolute top-4 right-4 text-gray-500 text-lg font-bold"
+                  className="p-auto absolute top-4 right-4 text-gray-500 text-lg font-bold"
                   onClick={handleClose}
                 >
                   ×
@@ -132,26 +134,26 @@ const CookieConsentBanner = ({ type }) => {
                   .
                 </p>
               )}
-              <div className="flex justify-between">
+              <div className="flex flex-row justify-center mx-auto space-x-2 sm:space-x-4 ">
                 {(type === 1 || type === 2 || type === 3 || type === 4) && (
                   <button
-                    className="bg-white text-blue-500 border-blue-500 border px-4 py-2 rounded-md shadow-md"
+                    className="bg-white text-blue-500 border-blue-500 border sm:px-4 py-1 px-2 sm:py-2 rounded-md shadow-md text-xs sm:text-base sm:w-40 w-20 h-10"
                     onClick={handleOpenSettings}
                   >
                     Cookie Settings
                   </button>
                 )}
                 {(type === 1 || type === 2 || type === 3 || type === 4) && (
-                  <div className="flex space-x-2">
+                  <div className="flex space-x-2 items-center">
                     <button
-                      className="bg-blue-500 text-white px-4 py-2 rounded-md shadow-md"
+                      className="bg-blue-500 text-white sm:px-4 py-1 px-2 sm:py-2 rounded-md shadow-md text-xs sm:text-base sm:w-40 w-20 h-10"
                       onClick={handleAccept}
                     >
                       Accept
                     </button>
                     {(type === 2 || type === 4) && (
                       <button
-                        className="bg-blue-500 text-white px-4 py-2 rounded-md shadow-md"
+                        className="bg-blue-500 text-white sm:px-4 py-1 px-2 sm:py-2 rounded-md shadow-md text-xs sm:text-base sm:w-40 w-20 h-10"
                         onClick={handleReject}
                       >
                         Reject
