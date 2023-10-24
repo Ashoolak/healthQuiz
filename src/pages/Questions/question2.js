@@ -39,7 +39,7 @@ export default function Question2(props) {
           </button>
 
           {showExtraYes && (
-            <div className="expanded-text show-content text-lg">
+            <div className="expanded-text sho">
               <p>
                 Having had an STI before could place you at greater risk of
                 having or getting one now. That’s because engaging in the same
@@ -82,13 +82,15 @@ export default function Question2(props) {
 
           {showExtraNo && (
             <div className="expanded-text show-content text-lg">
-              Did you know that having had an STI before could place you at
-              greater risk of having or getting one now? That’s because engaging
-              in the same or similar sexual behaviors could place you at risk
-              now. Some infections are also associated with HIV – having one of
-              these infections could put you at greater risk for also getting or
-              transmitting HIV. Continue choosing the prevention methods that
-              work for you!
+              <p>
+                Did you know that having had an STI before could place you at
+                greater risk of having or getting one now? That’s because
+                engaging in the same or similar sexual behaviors could place you
+                at risk now. Some infections are also associated with HIV –
+                having one of these infections could put you at greater risk for
+                also getting or transmitting HIV. Continue choosing the
+                prevention methods that work for you!
+              </p>
               <div className="flex justify-center">
                 <button onClick={props.onClick} className="primary-button">
                   Continue to Question 3 of 6 &gt;
@@ -96,8 +98,6 @@ export default function Question2(props) {
               </div>
             </div>
           )}
-          <div className="horizontal-line my-8"></div>
-
           <div className="horizontal-line my-8"></div>
 
           <button
@@ -115,15 +115,18 @@ export default function Question2(props) {
           </button>
 
           {showExtraIDK && (
-            <div className="expanded-text show-content text-lg">
-              If you don’t know, that’s okay! These infections don’t always
-              cause symptoms or may only cause mild symptoms. So, it is possible
-              to have had an infection and not known it. That is why getting a
-              test, or talking to your healthcare provider about testing, is
-              important if you are having sex. If you are diagnosed with an STI,
-              know that all are treatable with medicine, and some are curable
-              entirely. Or maybe you’ve never had one. Either way, continue
-              choosing the prevention methods that work for you!
+            <div className="expanded-text sho">
+              <p>
+                If you don’t know, that’s okay! These infections don’t always
+                cause symptoms or may only cause mild symptoms. So, it is
+                possible to have had an infection and not known it. That is why
+                getting a test, or talking to your healthcare provider about
+                testing, is important if you are having sex. If you are
+                diagnosed with an STI, know that all are treatable with
+                medicine, and some are curable entirely. Or maybe you’ve never
+                had one. Either way, continue choosing the prevention methods
+                that work for you!
+              </p>
               <div className="flex justify-center">
                 <button onClick={props.onClick} className="primary-button">
                   Continue to Question 3 of 6 &gt;

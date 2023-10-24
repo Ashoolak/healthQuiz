@@ -119,8 +119,6 @@ export default function Question4(props) {
           )}
           <div className="horizontal-line my-8"></div>
 
-          <div className="horizontal-line my-8"></div>
-
           <button
             onClick={() => {
               setShowExtraYes(false);

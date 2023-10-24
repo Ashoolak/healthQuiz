@@ -78,17 +78,20 @@ export default function Question3(props) {
 
           {showExtraNo && (
             <div className="expanded-text show-content text-lg">
-              Knowing if your partner has an STI is good information to have
-              when you’re making choices about your sexual health. If possible,
-              having a conversation about STIs is a good idea. Whatever you
-              learn can inform how you choose to protect yourself. For example,
-              if you learn that your partner is currently receiving treatment
-              for an STI, you may need treatment, too, and you probably need to
-              avoid sex until you’ve both completed your treatment. A
-              conversation with your partner is a good first step. Then your
-              healthcare provider can help you navigate next steps, which can
-              include offering you STI testing and treatment, including
-              medication to prevent or treat HIV infection, if you need it!
+              <p>
+                Knowing if your partner has an STI is good information to have
+                when you’re making choices about your sexual health. If
+                possible, having a conversation about STIs is a good idea.
+                Whatever you learn can inform how you choose to protect
+                yourself. For example, if you learn that your partner is
+                currently receiving treatment for an STI, you may need
+                treatment, too, and you probably need to avoid sex until you’ve
+                both completed your treatment. A conversation with your partner
+                is a good first step. Then your healthcare provider can help you
+                navigate next steps, which can include offering you STI testing
+                and treatment, including medication to prevent or treat HIV
+                infection, if you need it!
+              </p>
               <div className="flex justify-center">
                 <button onClick={props.onClick} className="primary-button">
                   Continue to Question 4 of 6 &gt;
@@ -96,8 +99,6 @@ export default function Question3(props) {
               </div>
             </div>
           )}
-          <div className="horizontal-line my-8"></div>
-
           <div className="horizontal-line my-8"></div>
 
           <button
@@ -116,19 +117,22 @@ export default function Question3(props) {
 
           {showExtraIDK && (
             <div className="expanded-text show-content text-lg">
-              Just like it’s possible to not know if you’ve had an STI before,
-              it’s also possible to not know if your partner has. That’s okay!
-              Knowing if your partner has an STI is good information to have
-              when you’re making choices about your sexual health. If possible,
-              having a conversation about STIs is a good idea. Whatever you
-              learn can inform how you choose to protect yourself. For example,
-              if you learn that your partner is currently receiving treatment
-              for an STI, you may need treatment, too, and you probably need to
-              avoid sex until you’ve both completed your treatment. A
-              conversation with your partner is a good first step. Then your
-              healthcare provider can help you navigate next steps. This can
-              include offering you STI testing and treatment, including
-              medication to prevent or treat HIV infection, if you need it.
+              <p>
+                Just like it’s possible to not know if you’ve had an STI before,
+                it’s also possible to not know if your partner has. That’s okay!
+                Knowing if your partner has an STI is good information to have
+                when you’re making choices about your sexual health. If
+                possible, having a conversation about STIs is a good idea.
+                Whatever you learn can inform how you choose to protect
+                yourself. For example, if you learn that your partner is
+                currently receiving treatment for an STI, you may need
+                treatment, too, and you probably need to avoid sex until you’ve
+                both completed your treatment. A conversation with your partner
+                is a good first step. Then your healthcare provider can help you
+                navigate next steps. This can include offering you STI testing
+                and treatment, including medication to prevent or treat HIV
+                infection, if you need it.
+              </p>
               <div className="flex justify-center">
                 <button onClick={props.onClick} className="primary-button">
                   Continue to Question 4 of 6 &gt;

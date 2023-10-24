@@ -52,11 +52,11 @@ export default function LandingPage(props) {
           <img
             src="/images/prepare.png"
             alt="Prepare"
-            className="max-w-sm sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-4xl mx-auto"
+            className="max-w-xs sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-4xl mx-auto"
           />
           <button
             onClick={props.onClick}
-            className="primary-button mt-4 bg-green-500 text-white font-bold py-4 px-8 text-xl md:text-2xl lg:text-3xl rounded-full border-white border-4 shadow-lg hover:bg-green-600"
+            className="primary-button m-auto mt-4 bg-green-500 text-white font-bold py-4 px-8 text-xl md:text-2xl lg:text-3xl rounded-full border-white border-4 shadow-lg hover:bg-green-600"
           >
             Begin Quiz!
           </button>

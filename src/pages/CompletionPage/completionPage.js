@@ -6,7 +6,7 @@ export default function CompletionPage() {
   return (
     <div
       id="completionPage"
-      className={`${styles['completion-background']} h-screen flex flex-col justify-start items-center`}
+      className={`${styles['completion-background']} min-h-screen flex flex-col justify-start items-center`}
     >
       <div className={`${styles['completion-text']}`}>
         <h2 className="text-center text-2xl font-bold">CONGRATULATION!</h2>
