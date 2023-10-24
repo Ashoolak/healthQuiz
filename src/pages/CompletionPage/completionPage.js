@@ -75,6 +75,14 @@ export default function CompletionPage() {
             Find Free, Fast, and Confidential Testing Near You
           </Link>
         </div>
+        <div className="flex flex-row justify-center w-8/12 mb-4">
+          <Link
+            href="/AdditionalLinks/aboutUs"
+            className="primary-button w-[200px]"
+          >
+            About Us
+          </Link>
+        </div>
       </div>
 
       <div className={styles.shape1}></div>
